@@ -5,7 +5,7 @@ www.ventduglobe.com
 
 
 Malamu Engineering - Développement rapide d'applications & Agile Project Management:
-Malamu Engineering - Data Science Fellowship for Research & Development. Established in 2019 Hyderabad, India with a network of experts across Africa.
+Malamu Engineering - A Data Science Fellowship for Research & Development. Established in 2019 Hyderabad, India with a network of experts across Africa.
 Nous voulons que les gens du monde entier sachent que le travail réparti peut être facile, en se concentrant sur de bonnes compétences de collaboration et en tirant parti d’outils modernes de travail conjoint. 
 
 Notre mission est de contribuer à l’élargissement de l’acceptation publique du concept de ville intelligente, afin d’améliorer la qualité de vie des citadins. 
