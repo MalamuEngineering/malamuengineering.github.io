@@ -1,92 +1,129 @@
-jQuery(document).ready(function () {
+;
+(function ($) {
+    "use strict";
+    jQuery(document).ready(function () {
 
-    jQuery(".play-1, .play-2").yu2fvl();
+        // == AOS Init== //
+        AOS.init({
+            disable: 'mobile'
+        });
 
-    jQuery(".owl-carousel4").owlCarousel(
-        {
-            loop: true,
-            center: true,
-            margin: 20,
-            responsiveClass: true,
-            nav: true,
-            responsive: {
-                0: {
-                    items: 2,
-
-                },
-                600: {
-                    items: 3,
-
-                },
-                1000: {
-                    items: 5,
-                    nav: true,
-                    loop: true
-                }
-            }
+        // == Search Bar== //
+        if ($('.search-icon').length) {
+            $('.search-icon').on('click', function () {
+                $('.search-form').toggleClass('show');
+            });
         }
-    );
 
-    jQuery(".owl-carousel5").owlCarousel(
-        {
-            loop: true,
-            center: false,
-            margin: 10,
-            responsiveClass: true,
-            nav: false,
-            responsive: {
-                0: {
-                    items: 2,
-
+        // == Hero Slider== //
+        if ($('.hero-slider').length) {
+            var swiper = new Swiper('.hero-slider', {
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: true,
                 },
-                600: {
-                    items: 3,
-
+                speed: 900,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
                 },
-                1000: {
-                    items: 6,
-                    nav: false,
-                    loop: true
-                }
-            }
+                navigation: {
+                    nextEl: '.arr-right',
+                    prevEl: '.arr-left',
+                },
+                on: {
+                    slideChangeTransitionStart: function () {
+                        $('.slide-content h1, .slide-content p, .slide-content a').removeClass('aos-init').removeClass('aos-animate');
+                    },
+                    slideChangeTransitionEnd: function () {
+                        AOS.init();
+                    },
+                },
+            });
+
+            $(".hero-slider").hover(function () {
+                (this).swiper.autoplay.stop();
+            }, function () {
+                (this).swiper.autoplay.start();
+            });
         }
-    );
 
-});
+        // == Testimonial Slider== //
+        if ($('.test-slider').length) {
+            var swiper = new Swiper('.test-slider', {
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: true,
+                },
+                speed: 1200,
+                loop: true,
+                pagination: {
+                    el: '.test-pagination',
+                    clickable: true
+                },
+                on: {
+                    slideChangeTransitionStart: function () {
+                        $('.testimonials .test-img, .testimonials h5, .testimonials span, .testimonials p').removeClass('aos-init').removeClass('aos-animate');
+                    },
+                    slideChangeTransitionEnd: function () {
+                        AOS.init();
+                    },
+                },
+            });
 
-function myFunction(x) {
-    x.classList.toggle("change");
-}
+            $(".test-slider").hover(function () {
+                (this).swiper.autoplay.stop();
+            }, function () {
+                (this).swiper.autoplay.start();
+            });
+        }
 
+        // == Clients Slider== //
+        if ($('.clients-slider').length) {
+            var swiper = new Swiper('.clients-slider', {
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: true,
+                },
+                speed: 900,
+                loop: true,
+                slidesPerView: 5,
+                breakpoints: {
+                    1200: {
+                        slidesPerView: 4
+                    },
+                    992: {
+                        slidesPerView: 3
+                    },
+                    576: {
+                        slidesPerView: 2
+                    },
+                    400: {
+                        slidesPerView: 1
+                    }
+                }
+            });
 
+            $(".clients-slider").hover(function () {
+                (this).swiper.autoplay.stop();
+            }, function () {
+                (this).swiper.autoplay.start();
+            });
+        }
 
-jQuery(".link-img").click(function () {
-    var link = jQuery(this).attr("data-link");
-    //alert(link);
-    jQuery("#screen").attr("src", link)
-});
+        // == Light Gallery== //
+        if ($('#lightgallery').length) {
+            $("#lightgallery").lightGallery();
+        }
+    });
 
+    jQuery(window).on('load', function () {
+        // == Animate loader off screen == //
+        $(".css-loader").fadeOut("slow");
+        AOS.init({
+            disable: 'mobile'
+        });
 
-
-var count = 0;
-jQuery("#toggle-search").click(function () {
-    count++;
-    //even odd click detect 
-    var isEven = function (someNumber) {
-        return (someNumber % 2 === 0) ? true : false;
-    };
-    // on odd clicks do this
-    if (isEven(count) === false) {
-        //jQuery("#nav-search").css({"display":"block"});
-        jQuery("#nav-search").slideDown();
-        jQuery("#toggle-search").attr("src", "assets/images/close.png");
-
-    }
-    // on even clicks do this
-    else if (isEven(count) === true) {
-        //jQuery("#nav-search").css({"display":"none"});
-        jQuery("#nav-search").slideUp();
-
-        jQuery("#toggle-search").attr("src", "assets/images/search-icon.png");
-    }
-});
+    });
+})(jQuery)
