@@ -12,11 +12,13 @@ Nous voulons que les gens du monde entier sachent que le travail réparti peut �
 Notre mission est de contribuer à l’élargissement de l’acceptation publique du concept de ville intelligente, afin d’améliorer la qualité de vie des citadins. 
 Notre objectif, implique activement l'utilisateur final dans un principe de « validation permanente », afin d'obtenir un produit en adéquation avec les réels besoins.
 Notre méthode de développement est structurée en 5 étapes: 
+
 * L’INITIALISATION
 * Le CADRAGE
 * Le DESIGN
 * La CONSTRUCTION
 * La FINALISATION
+
     1 - Préparation de l’organisation et communication (Initialisation): Cette phase permet de définir le périmètre général du projet, de structurer le travail par thèmes, de sélectionner les acteurs pertinents et d’amorcer une dynamique de projet.
     2 - Analyse et expression des exigences (Cadrage): La spécification des exigences est du ressort des utilisateurs. Ils expriment leurs besoins lors d’entretiens de groupe. Il est généralement prévu de 2 à 5 jours de sessions par commission (thème).
     3 - Conception et modélisation (Design): Les utilisateurs sont également impliqués dans cette étape. Ils participent à l’affinage et à la validation des modèles organisationnels : flux, traitements, données. Ils valident également le premier niveau de prototype présentant l’ergonomie et la cinématique générale de l’application. Il est prévu entre 4 et 8 jours de sessions par commission. Cette phase représente environ 23 % du projet. À partir de la phase de Design, la parallélisation du travail est possible.
@@ -33,11 +35,14 @@ Construction (Le principe itératif, incrémental et adaptatif):
 
 * Nos Fondements:
 Quatre valeurs fondamentales:
+
     1-Les Individus et leurs interactions plus que les processus et les outils
     2-Des logiciels opérationnels plus qu'une documentation exhaustive
     3-La collaboration avec les clients plus que la négociation contractuelle
     4-L'adaptation au changement plus que le suivi d'un plan
+    
 Nos douze principes généraux:
+
     Satisfaire le client en priorité
     Accueillir favorablement les demandes de changement
     Livrer le plus souvent possible des versions opérationnelles de l’application
