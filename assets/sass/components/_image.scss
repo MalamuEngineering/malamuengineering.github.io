@@ -1,26 +1,19 @@
-///
-/// Story by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
 /* Image */
 
 	.image {
-		border: 0;
 		border-radius: _size(border-radius);
+		border: 0;
 		display: inline-block;
 		position: relative;
 
 		img {
-			display: block;
 			border-radius: _size(border-radius);
+			display: block;
 		}
 
 		&.left,
 		&.right {
-			width: 40%;
-			max-width: 10rem;
+			max-width: 40%;
 
 			img {
 				width: 100%;
@@ -29,13 +22,13 @@
 
 		&.left {
 			float: left;
-			margin: 0 1.5rem 1rem 0;
+			margin: 0 2rem 2rem 0;
 			top: 0.25rem;
 		}
 
 		&.right {
 			float: right;
-			margin: 0 0 1rem 1.5rem;
+			margin: 0 0 2rem 2rem;
 			top: 0.25rem;
 		}
 
